@@ -1,10 +1,12 @@
 # acreom_internship_task
 
-# Components
+## Components
 ## SideBar.vue
-- Responsible for sidebar functionality: adding and removing destinations.
+> Responsible for sidebar functionality: adding and removing destinations.
 
-### Script
+<br/>
+
+### Information on the script tag content
 **Props:**
 - `destinations` - an array of `Destination` objects.
 
@@ -19,18 +21,27 @@
 - `addDestination()` - emits an event that fires up to parent elements, and passes necessary data.
 - `removeDestination(destination: Destination)` - emits an event that fires up to parent elements, and passes necessary data.
 
+<br/>
+<br/>
+
 
 ## NotificationArea.vue
-- Responsible for showing a notification snackbar for 5 seconds upon adding or removing a destination.
+> Responsible for showing a notification snackbar for 5 seconds upon adding or removing a destination.
 
-### Script
+<br/>
+
+### Information on the script tag content
 
 **Props:**
 - `notifications` - an array of `Notification` objects.
 
+<br/>
+
 ---
 
-## Project Setup
+<br/>
+
+### Project Setup
 
 ```sh
 npm install
@@ -48,7 +59,11 @@ npm run dev
 npm run build
 ```
 
+<br/>
+
 ---
+
+<br/>
 
 
 ### Optional
