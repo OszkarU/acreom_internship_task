@@ -20,8 +20,6 @@ acreom_internship_task
 - `removeDestination(destination: Destination)` - emits an event that fires up to parent elements, and passes necessary data.
 
 <br/>
-<br/>
-
 
 ## NotificationArea.vue ##
 > Responsible for showing a notification snackbar for 5 seconds upon adding or removing a destination.
@@ -52,8 +50,6 @@ npm run dev
 ```sh
 npm run build
 ```
-
-<br/>
 
 ---
 
