@@ -1,5 +1,3 @@
-acreom_internship_task
-
 ## Components 
 ## SideBar.vue
 > Responsible for sidebar functionality: adding and removing destinations.
