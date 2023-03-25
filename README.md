@@ -1,25 +1,34 @@
 # acreom_internship_task
 
-This template should help get you started developing with Vue 3 in Vite.
+## Components
+## SideBar.vue
+- Responsible for sidebar functionality: adding and removing destinations.
 
-## Recommended IDE Setup
+### Script
+**Props:**
+- `destinations` - an array of `Destination` objects.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+**Data:**
+- `inputValue` - a string representing the current value of the input field.
+- `disabled` - a boolean indicating whether the "Add" button should be disabled.
 
-## Type Support for `.vue` Imports in TS
+**Watch:**
+- `inputValue` - when the input field records a change, check if there's any input, if not disable the "Add" button.
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+**Methods:**
+- `addDestination()` - emits an event that fires up to parent elements, and passes necessary data.
+- `removeDestination(destination: Destination)` - emits an event that fires up to parent elements, and passes necessary data.
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
 
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+## NotificationArea.vue
+- Responsible for showing a notification snackbar upon adding or removing a destination for 5 seconds.
 
-## Customize configuration
+### Script
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+**Props:**
+- `notifications` - an array of `Notification` objects.
+
+---
 
 ## Project Setup
 
@@ -33,27 +42,29 @@ npm install
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
+### Type-Check and Compile for Production
 
 ```sh
 npm run build
 ```
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+---
+
+
+### Optional
+### Serve the `dist` Folder
+
+After running `npm run build`, the project will be compiled and the code will be stored in the `dist` folder. To serve the `dist` folder on a local server, you can use the `serve` package.
+
+First, make sure the `serve` package is installed. If it is not installed, you can install it by running the following command in your terminal:
 
 ```sh
-npm run test:unit
+npm install -g serve
 ```
 
-### Run End-to-End Tests with [Cypress](https://www.cypress.io/)
+Once the `serve` package is installed, navigate to the project root directory in your terminal and run the following command:
 
 ```sh
-npm run build
-npm run test:e2e # or `npm run test:e2e:ci` for headless testing
+serve dist
 ```
 
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
