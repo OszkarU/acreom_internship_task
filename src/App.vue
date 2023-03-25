@@ -36,7 +36,7 @@ export default defineComponent({
             this.ShowNotification(destination.name, "Removed");
         },
 
-        ShowNotification(name: string, action: string) {
+        ShowNotification(name: string, action: string) { //show notification for 5sec
             const t = Math.random();
             this.notifications.push({name: name, time: t, action: action});
             setTimeout((() => {this.notifications = this.notifications.filter((n: { time: number }) => t !== n.time)}), 5000);
