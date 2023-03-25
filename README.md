@@ -1,6 +1,6 @@
 # acreom_internship_task
 
-## Components
+# Components
 ## SideBar.vue
 - Responsible for sidebar functionality: adding and removing destinations.
 
@@ -21,7 +21,7 @@
 
 
 ## NotificationArea.vue
-- Responsible for showing a notification snackbar upon adding or removing a destination for 5 seconds.
+- Responsible for showing a notification snackbar for 5 seconds upon adding or removing a destination.
 
 ### Script
 
