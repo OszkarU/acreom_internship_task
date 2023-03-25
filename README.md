@@ -1,4 +1,4 @@
-# acreom_internship_task #
+acreom_internship_task
 
 ## Components ##
 ## SideBar.vue ##
