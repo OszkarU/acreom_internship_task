@@ -25,18 +25,17 @@ export default defineComponent({
     },
     methods: {
         DestinationsAdded(input: string) {
-            const d: Destination = { name: input, id: Math.random() }; //create and add to the array of Destination
-            console.log(d.name.length);
+            const d: Destination = { name: input, id: Math.random() };
             d.name.length>0 ? (this.destinations.push(d), this.ShowNotification(d.name, "Added")) : null;
         },
 
         DestinationsRemoved(destination: Destination) {
-            const indexOfObject = this.destinations.findIndex((d: { id: number }) => d.id === destination.id); //remove the specific destination
+            const indexOfObject = this.destinations.findIndex((d: { id: number }) => d.id === destination.id); 
             this.destinations.splice(indexOfObject, 1)
             this.ShowNotification(destination.name, "Removed");
         },
 
-        ShowNotification(name: string, action: string) { //show notification for 5sec
+        ShowNotification(name: string, action: string) {
             const t = Math.random();
             this.notifications.push({name: name, time: t, action: action});
             setTimeout((() => {this.notifications = this.notifications.filter((n: { time: number }) => t !== n.time)}), 5000);

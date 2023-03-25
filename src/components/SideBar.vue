@@ -21,7 +21,7 @@ import type { Destination } from '@/sharedTypes';
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  props: { //data from parent element
+  props: { 
         destinations: {
             type: Array<Destination>,
         }
@@ -32,13 +32,13 @@ export default defineComponent({
             disabled: true,
         };
     },
-    watch: { //when inputfield records a change, check if there's any input, if not disable the add button
+    watch: {
         inputValue() {
             this.inputValue.length>0 ? this.disabled = false : this.disabled = true;
         }
     },
     methods: {
-        addDestination: function() { //emit an event, that fires up to parent elements, and pass neccessary data
+        addDestination: function() {
             this.$emit("addDestination", this.inputValue);
             this.inputValue = "";
         },

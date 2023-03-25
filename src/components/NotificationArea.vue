@@ -11,7 +11,7 @@ import type { Notification } from '@/sharedTypes';
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-    props: { //data from parent element
+    props: {
         notifications: {
             type: Array<Notification>,
         }

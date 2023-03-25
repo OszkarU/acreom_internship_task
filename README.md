@@ -4,8 +4,6 @@ acreom_internship_task
 ## SideBar.vue ##
 > Responsible for sidebar functionality: adding and removing destinations.
 
-<br/>
-
 ### Information on the script tag content
 **Props:**
 - `destinations` - an array of `Destination` objects.
@@ -28,8 +26,6 @@ acreom_internship_task
 ## NotificationArea.vue ##
 > Responsible for showing a notification snackbar for 5 seconds upon adding or removing a destination.
 
-<br/>
-
 ### Information on the script tag content
 
 **Props:**
@@ -38,8 +34,6 @@ acreom_internship_task
 <br/>
 
 ---
-
-<br/>
 
 ### Project Setup
 
@@ -62,9 +56,6 @@ npm run build
 <br/>
 
 ---
-
-<br/>
-
 
 ### Optional
 ### Serve the `dist` Folder
