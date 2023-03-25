@@ -8,10 +8,10 @@
 
 **Data:**
 - `inputValue` - a string representing the current value of the input field.
-- `disabled` - a boolean indicating whether the "Add" button should be disabled.
+- `disabled` - a boolean indicating whether the "add" button should be disabled.
 
 **Watch:**
-- `inputValue` - when the input field records a change, check if there's any input, if not disable the "Add" button.
+- `inputValue` - when the input field records a change, check if there's any input, if not disable the "add" button.
 
 **Methods:**
 - `addDestination()` - emits an event that fires up to parent elements, and passes necessary data.
